@@ -139,4 +139,4 @@ MESSAGE_TAGS = {
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-API_KEY = ""
+API_KEY = "AIzaSyBwy7U36nEem7b2kfI02dIVcq3JTpRuTIE"
