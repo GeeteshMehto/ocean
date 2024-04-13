@@ -3,6 +3,10 @@
     {
       "src": "/(.*)",
       "dest": "ocean/wsgi.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "ocean/manage.py"
     }
   ]
 }
