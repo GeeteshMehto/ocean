@@ -8,6 +8,11 @@ from django.views.decorators.csrf import csrf_exempt
 from keras.models import load_model  # TensorFlow is required for Keras to work
 from PIL import Image, ImageOps  # Install pillow instead of PIL
 import numpy as np
+import tensorflow as tf
+tf.config.set_visible_devices([], 'GPU')  # Disable GPU
+
+# Load the model during application startup
+model = load_model("models/keras_model.h5", compile=False)
 
 
 
@@ -36,7 +41,7 @@ def predict(path):
     np.set_printoptions(suppress=True)
 
     # Load the model
-    model = load_model("models/keras_model.h5", compile=False)
+    # model = load_model("models/keras_model.h5", compile=False)
 
     # Load the labels
     class_names = open("labels/labels.txt", "r").readlines()
