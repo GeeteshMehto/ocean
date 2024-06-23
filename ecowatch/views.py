@@ -9,7 +9,7 @@ from keras.models import load_model  # TensorFlow is required for Keras to work
 from PIL import Image, ImageOps  # Install pillow instead of PIL
 import numpy as np
 import tensorflow as tf
-tf.config.set_visible_devices([], 'GPU')  # Disable GPU
+# tf.config.set_visible_devices([], 'GPU')  # Disable GPU
 
 # Load the model during application startup
 model = load_model("models/keras_model.h5", compile=False)
